@@ -2,25 +2,26 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2024-01-23T17:30:06.315+05:30"
+        cq:lastModified="{Date}2024-01-23T19:42:28.664+05:30"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2024-01-23T17:30:06.317+05:30"
+        cq:lastRolledout="{Date}2024-01-23T19:42:28.665+05:30"
         cq:lastRolledoutBy="admin"
+        cq:siteOwner="admin"
         cq:template="/conf/assesment/settings/wcm/templates/assesmenttemplate"
-        jcr:mixinTypes="[cq:LiveRelationship,cq:LiveSync]"
+        jcr:mixinTypes="[cq:LiveSync]"
         jcr:primaryType="cq:PageContent"
-        jcr:title="us"
+        jcr:title="United States"
         sling:resourceType="assesment/components/assesmentPage"
-        pageTitle="language-master">
+        pageTitle="language-masters">
         <root
-            cq:lastRolledout="{Date}2024-01-23T17:30:06.311+05:30"
+            cq:lastRolledout="{Date}2024-01-23T19:42:28.662+05:30"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="assesment/components/container"
             layout="responsiveGrid">
             <container
-                cq:lastRolledout="{Date}2024-01-23T17:30:06.316+05:30"
+                cq:lastRolledout="{Date}2024-01-23T19:42:28.665+05:30"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
@@ -28,11 +29,10 @@
                 layout="responsiveGrid"/>
         </root>
         <cq:LiveSyncConfig
-            cq:excludedPaths="[fr]"
-            cq:isDeep="{Boolean}true"
-            cq:master="/content/assesment/language-master0"
+            cq:isDeep="{Boolean}false"
+            cq:master="/content/assesment/language-masters"
             cq:rolloutConfigs="[/libs/msm/wcm/rolloutconfigs/default]"
             jcr:primaryType="cq:LiveCopy"/>
     </jcr:content>
-    <en-us/>
+    <en/>
 </jcr:root>
