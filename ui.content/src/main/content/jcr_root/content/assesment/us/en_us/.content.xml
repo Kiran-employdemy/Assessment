@@ -2,26 +2,35 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2024-01-23T15:37:29.505+05:30"
+        cq:cloudserviceconfigs="[/libs/settings/cloudconfigs/translation/translationcfg/default_translation]"
+        cq:conf="/conf/assesment"
+        cq:lastModified="{Date}2024-01-23T15:37:29.537+05:30"
         cq:lastModifiedBy="admin"
-        cq:lastRolledout="{Date}2024-01-23T15:37:29.507+05:30"
+        cq:lastRolledout="{Date}2024-01-23T15:37:29.541+05:30"
         cq:lastRolledoutBy="admin"
-        cq:siteOwner="admin"
+        cq:lastTranslationDone="{Date}2024-01-23T15:31:56.587+05:30"
+        cq:lastTranslationUpdate="{Date}2024-01-23T15:31:10.937+05:30"
         cq:template="/conf/assesment/settings/wcm/templates/assesmenttemplate"
-        jcr:mixinTypes="[cq:LiveSync]"
+        cq:translationMethod="MACHINE_TRANSLATION"
+        cq:translationProject="[/content/projects/assesmenttranslationproj/assesmenttranslationproj]"
+        cq:translationProviderCloudConfig="/libs/settings/cloudconfigs/translation/msft-translation/msft_trial"
+        cq:translationProviderName="microsoft"
+        cq:translationSourcePath="/content/assesment/language-master/en"
+        cq:translationStatus="COMPLETE"
+        jcr:mixinTypes="[cq:LiveRelationship,cq:LiveSync]"
         jcr:primaryType="cq:PageContent"
-        jcr:title="United States"
+        jcr:title="en_us"
         sling:resourceType="assesment/components/assesmentPage"
-        pageTitle="language-master">
+        pageTitle="en">
         <root
-            cq:lastRolledout="{Date}2024-01-23T15:37:29.502+05:30"
+            cq:lastRolledout="{Date}2024-01-23T15:37:29.536+05:30"
             cq:lastRolledoutBy="admin"
             jcr:mixinTypes="[cq:LiveRelationship]"
             jcr:primaryType="nt:unstructured"
             sling:resourceType="assesment/components/container"
             layout="responsiveGrid">
             <container
-                cq:lastRolledout="{Date}2024-01-23T15:37:29.506+05:30"
+                cq:lastRolledout="{Date}2024-01-23T15:37:29.540+05:30"
                 cq:lastRolledoutBy="admin"
                 jcr:mixinTypes="[cq:LiveRelationship]"
                 jcr:primaryType="nt:unstructured"
@@ -30,9 +39,9 @@
         </root>
         <cq:LiveSyncConfig
             cq:isDeep="{Boolean}false"
-            cq:master="/content/assesment/language-master"
+            cq:master="/content/assesment/language-master/en_us"
             cq:rolloutConfigs="[/libs/msm/wcm/rolloutconfigs/default]"
             jcr:primaryType="cq:LiveCopy"/>
     </jcr:content>
-    <en_us/>
+    <test/>
 </jcr:root>
