@@ -2,13 +2,13 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        cq:lastModified="{Date}2024-01-23T19:36:16.526+05:30"
+        cq:lastModified="{Date}2024-01-23T19:38:00.978+05:30"
         cq:lastModifiedBy="admin"
         cq:template="/conf/assesment/settings/wcm/templates/assesmenttemplate"
         jcr:primaryType="cq:PageContent"
-        jcr:title="English"
+        jcr:title="test"
         sling:resourceType="assesment/components/assesmentPage"
-        pageTitle="english">
+        pageTitle="test">
         <root
             jcr:primaryType="nt:unstructured"
             sling:resourceType="assesment/components/container"
@@ -19,5 +19,4 @@
                 layout="responsiveGrid"/>
         </root>
     </jcr:content>
-    <test/>
 </jcr:root>
