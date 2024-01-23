@@ -23,15 +23,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.assessment</groupId>
-        <artifactId>assessment</artifactId>
+        <groupId>com.assesment</groupId>
+        <artifactId>assesment</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>assessment.ui.tests</artifactId>
-    <name>assessment - UI Tests</name>
-    <description>UI Tests for assessment</description>
+    <artifactId>assesment.ui.tests</artifactId>
+    <name>assesment - UI Tests</name>
+    <description>UI Tests for assesment</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

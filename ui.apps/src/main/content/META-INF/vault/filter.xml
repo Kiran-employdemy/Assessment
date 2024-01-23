@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
-    <filter root="/apps/assessment/clientlibs"/>
-    <filter root="/apps/assessment/components"/>
-    <filter root="/apps/assessment/i18n"/>
+    <filter root="/apps/assesment/clientlibs"/>
+    <filter root="/apps/assesment/components"/>
+    <filter root="/apps/assesment/i18n"/>
+    <filter root="/apps/msm/assesment_blueprint" mode="merge"/>
 </workspaceFilter>

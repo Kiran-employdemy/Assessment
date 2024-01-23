@@ -15,6 +15,6 @@
   ~ limitations under the License.
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <workspaceFilter version="1.0">
-    <filter root="/apps/assessment-packages"/>
-    <filter root="/apps/assessment-vendor-packages"/>
+    <filter root="/apps/assesment-packages"/>
+    <filter root="/apps/assesment-vendor-packages"/>
 </workspaceFilter>

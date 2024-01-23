@@ -18,14 +18,14 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.assessment</groupId>
-        <artifactId>assessment</artifactId>
+        <groupId>com.assesment</groupId>
+        <artifactId>assesment</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <artifactId>assessment.core</artifactId>
-    <name>assessment - Core</name>
-    <description>Core bundle for assessment</description>
+    <artifactId>assesment.core</artifactId>
+    <name>assesment - Core</name>
+    <description>Core bundle for assesment</description>
     <build>
         <plugins>
             <plugin>
