@@ -13,13 +13,14 @@ import com.day.cq.wcm.api.Page;
 		"service.description=AEM GEEKS Training" })
 public class AssessmentServiceImpl implements AssesmentService {
     
-     public Map<String,String> createTextSearchQuery(String path,int number){
+     public Map<String,String> createTextSearchQuery(String parentpath,int number){
         Map<String,String> queryMap=new HashMap<>();
         //Integer num=(Integer)number;
-        queryMap.put("path","path");
         queryMap.put("type","cq:page");
-        queryMap.put("p.limit",Integer.toString(number));
-      
+        queryMap.put("path",parentpath);
+        queryMap.put("property","jcr:content/cq:template");
+        queryMap.put("property.value","/conf/assesment/settings/wcm/templates/assesmenttemplate");
+        queryMap.put("p.limit",Integer.toString(number));  
         return queryMap;
     }
 

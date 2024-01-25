@@ -1,66 +1,73 @@
-// package com.assesment.core.servlets;
+package com.assesment.core.servlets;
 
-// import java.io.IOException;
+import java.io.IOException;
 
-// import javax.servlet.Servlet;
-// import javax.servlet.ServletException;
+import javax.servlet.Servlet;
+import javax.servlet.ServletException;
 
-// import org.apache.sling.api.SlingHttpServletRequest;
-// import org.apache.sling.api.SlingHttpServletResponse;
-// import org.apache.sling.api.resource.Resource;
-// import org.apache.sling.api.resource.ResourceResolver;
-// import org.apache.sling.api.resource.ResourceResolverFactory;
-// import org.apache.sling.api.servlets.SlingAllMethodsServlet;
-// import org.apache.sling.servlets.annotations.SlingServletPaths;
-// import org.osgi.service.component.annotations.Component;
-// import org.osgi.service.component.annotations.Reference;
+import org.apache.sling.api.SlingHttpServletRequest;
+import org.apache.sling.api.SlingHttpServletResponse;
+import org.apache.sling.api.resource.Resource;
+import org.apache.sling.api.resource.ResourceResolver;
+import org.apache.sling.api.resource.ResourceResolverFactory;
+import org.apache.sling.api.servlets.SlingAllMethodsServlet;
+import org.apache.sling.servlets.annotations.SlingServletPaths;
+import org.osgi.service.component.annotations.Component;
+import org.osgi.service.component.annotations.Reference;
 
-// import com.assesment.core.utils.ResolverUtil;
-// import com.day.cq.wcm.api.Page;
-// import com.day.cq.wcm.api.PageManager;
-
-
+import com.assesment.core.utils.ResolverUtil;
+import com.day.cq.wcm.api.Page;
+import com.day.cq.wcm.api.PageManager;
 
 
-// @Component(service = { Servlet.class })
-// @SlingServletPaths(
-//         value = {"/bin/createcustompages"}
-// )
-// public class PageAddServlet extends SlingAllMethodsServlet {
+
+
+@Component(service = { Servlet.class })
+@SlingServletPaths(
+        value = {"/bin/createcustompages"}
+)
+public class PageAddServlet extends SlingAllMethodsServlet {
 	
-//     @Reference
-//     ResourceResolverFactory resolverFactory;
+    @Reference
+    ResourceResolverFactory resolverFactory;
 
-//     @Override
-//     protected void doGet(SlingHttpServletRequest req, SlingHttpServletResponse resp)
-//             throws ServletException, IOException {
+    @Override
+    protected void doGet(SlingHttpServletRequest req, SlingHttpServletResponse resp)
+            throws ServletException, IOException {
    
-//                 Page newPage;
-//                 PageManager pagemanager;
-//                 ResourceResolver resourceResolver;
-//                 Resource resource;
-//                 com.day.cq.wcm.api.Page page;
-//         try {
-//             String pagePath="/content/assesment/article-pages";
-//             String templatePath="/conf/assesment/settings/wcm/templates/assesmenttemplate";
-//             String pageTitle="firstpage";
-//             String pageName ="firstpage";
+                Page newPage;
+                PageManager pagemanager;
+                ResourceResolver resourceResolver;
+                Resource resource;
+                com.day.cq.wcm.api.Page page;
+        try {
+            String pagePath="/content/assesment";
+            String templatePath="/conf/assesment/settings/wcm/templates/assesmenttemplate";
+            String pageTitle="firstpage";
+            String pageName ="firstpage";
+            String pageTitle1="";
+            String pageName1 ="";
 
-//             resourceResolver=ResolverUtil.newResolver(resolverFactory);
-//             //resourceResolver=req.getResourceResolver();
-//             pagemanager=resourceResolver.adaptTo(PageManager.class);
-//             page=pagemanager.create(pagePath,pageTitle,templatePath, pageName);
 
-//             resourceResolver.commit();
+            resourceResolver=ResolverUtil.newResolver(resolverFactory);
+            //resourceResolver=req.getResourceResolver();
+            
+            pagemanager=resourceResolver.adaptTo(PageManager.class);
+            for(int i=0;i<6;i++){
+                pageName1=pageName+i;
+                pageTitle1=pageTitle+i;
+            page=pagemanager.create(pagePath,pageName1,templatePath, pageTitle1);
+            }
+            resourceResolver.commit();
     
-//             resp.getWriter().write("======FORM SUBMITTED p========");  
-//         }catch (Exception e){
+            resp.getWriter().write("======FORM SUBMITTED p========");  
+        }catch (Exception e){
             
             
-//            e.printStackTrace();
-//         }
-//         resp.getWriter().write("======FORM SUBMITTED p========");
+           e.printStackTrace();
+        }
+        resp.getWriter().write("======FORM SUBMITTED p========");
 
-//     }
+    }
 
-// }
+}
