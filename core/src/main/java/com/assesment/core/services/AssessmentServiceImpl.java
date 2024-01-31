@@ -41,7 +41,7 @@ public class AssessmentServiceImpl implements AssesmentService {
         queryMap.put("type","cq:page");
         queryMap.put("path",path);
         queryMap.put("property","jcr:content/cq:template");
-        queryMap.put("property.value","/conf/assesment/settings/wcm/templates/assesmenttemplate");
+        queryMap.put("property.value",template);
         queryMap.put("p.limit","-1");  
         return queryMap;
     }

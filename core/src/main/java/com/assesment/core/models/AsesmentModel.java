@@ -1,5 +1,6 @@
 package com.assesment.core.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -25,10 +26,22 @@ public class AsesmentModel {
     @Default(values="No template given")
     private String template;
 
+    public String getPath() {
+        return path;
+    }
+
+    public String getTemplate() {
+        return template;
+    }
+
+    public List<AssesmentPojo> getPageInfoList() {
+        return pageInfoList;
+    }
+
     @OSGiService 
     AssesmentService assesmentService;
 
-    private List<AssesmentPojo> pageInfoList;
+    private List<AssesmentPojo> pageInfoList=new ArrayList<AssesmentPojo>();
 
     @PostConstruct
     protected void init() throws LoginException, RepositoryException {

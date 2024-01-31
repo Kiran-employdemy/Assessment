@@ -2,19 +2,19 @@ package com.assesment.core.models;
 
 public class AssesmentPojo {
     private String path;
-    private String template;
+    private String name;
 
-    public AssesmentPojo(String path, String template) {
+    public AssesmentPojo(String path, String name) {
         this.path = path;
-        this.template = template;
+        this.name = name;
     }
 
     public String getPath() {
         return path;
     }
 
-    public String getTemplate() {
-        return template;
+    public String getName() {
+        return name;
     }
     
 }
